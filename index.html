@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Khusi — What Should I Watch?</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+    <div class="page">
+
+
+        <!-- DECORATIVE FILM STRIP -->
+
+        <div class="film-strip">
+            <span>✦</span>
+            <span>○</span>
+            <span>✦</span>
+            <span>○</span>
+            <span>✦</span>
+            <span>○</span>
+            <span>✦</span>
+            <span>○</span>
+            <span>✦</span>
+        </div>
+
+
+        <!-- HEADER -->
+
+        <header>
+
+            <div class="brand">
+                KHUSI
+            </div>
+
+            <div class="header-text">
+                YOUR MOVIE COMPANION
+            </div>
+
+        </header>
+
+
+
+        <!-- HERO -->
+
+        <section class="hero">
+
+
+            <!-- FEMALE AVATAR -->
+
+            <div class="avatar-wrap">
+
+                <div class="hair-back"></div>
+
+                <div class="face">
+
+                    <div class="hair-front"></div>
+
+                    <div class="eye left-eye"></div>
+                    <div class="eye right-eye"></div>
+
+                    <div class="nose"></div>
+
+                    <div class="smile"></div>
+
+                    <div class="earring left-earring"></div>
+                    <div class="earring right-earring"></div>
+
+                </div>
+
+                <div class="neck"></div>
+
+                <div class="dress"></div>
+
+            </div>
+
+
+            <div class="hero-content">
+
+                <p class="small-title">
+                    ✦ LET'S FIND YOUR NEXT FILM ✦
+                </p>
+
+                <h1>
+                    What should<br>
+                    <em>we watch?</em>
+                </h1>
+
+                <div class="divider">
+                    ✦
+                </div>
+
+                <p class="intro">
+
+                    Hi, I'm <strong>Khusi</strong>. ♡
+
+                    <br>
+
+                    Tell me what kind of movie you're
+                    craving tonight, and I'll help you
+                    find the one.
+
+                </p>
+
+                <button
+                    class="begin-button"
+                    onclick="startChat()"
+                >
+                    Begin the movie night →
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- MAIN QUESTION AREA -->
+
+        <main id="conversation" style="display:none;">
+
+
+            <!-- QUESTION 1 -->
+
+            <section class="question-section" id="question1">
+
+                <p class="question-number">
+                    01 — THE MOOD
+                </p>
+
+                <h2>
+                    So... what are we<br>
+                    <em>feeling tonight?</em>
+                </h2>
+
+                <p class="question-subtitle">
+                    Don't overthink it. Go with your first instinct.
+                </p>
+
+
+                <div class="options">
+
+                    <button onclick="chooseMood('funny')">
+                        😂 Something funny
+                    </button>
+
+                    <button onclick="chooseMood('scary')">
+                        🕯️ Something scary
+                    </button>
+
+                    <button onclick="chooseMood('romantic')">
+                        🌹 Something romantic
+                    </button>
+
+                    <button onclick="chooseMood('mind')">
+                        🌀 Blow my mind
+                    </button>
+
+                    <button onclick="chooseMood('action')">
+                        🔥 Give me action
+                    </button>
+
+                    <button onclick="chooseMood('emotional')">
+                        💌 Make me emotional
+                    </button>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- QUESTION 2 -->
+
+            <section
+                class="question-section hidden"
+                id="question2"
+            >
+
+                <p class="question-number">
+                    02 — THE GENRE
+                </p>
+
+                <h2>
+                    Pick a little<br>
+                    <em>something...</em>
+                </h2>
+
+                <p class="question-subtitle">
+                    What kind of story sounds good right now?
+                </p>
+
+
+                <div class="options">
+
+                    <button onclick="chooseGenre('comedy')">
+                        🎭 Comedy
+                    </button>
+
+                    <button onclick="chooseGenre('horror')">
+                        🕯️ Horror
+                    </button>
+
+                    <button onclick="chooseGenre('romance')">
+                        🌹 Romance
+                    </button>
+
+                    <button onclick="chooseGenre('sci-fi')">
+                        ✦ Sci-Fi
+                    </button>
+
+                    <button onclick="chooseGenre('action')">
+                        ⚔️ Action
+                    </button>
+
+                    <button onclick="chooseGenre('drama')">
+                        🎞️ Drama
+                    </button>
+
+                    <button onclick="chooseGenre('thriller')">
+                        🗝️ Thriller
+                    </button>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- QUESTION 3 -->
+
+            <section
+                class="question-section hidden"
+                id="question3"
+            >
+
+                <p class="question-number">
+                    03 — THE TIME
+                </p>
+
+                <h2>
+                    How long do we<br>
+                    <em>have tonight?</em>
+                </h2>
+
+
+                <div class="options">
+
+                    <button onclick="chooseTime('short')">
+                        ☕ Under 90 minutes
+                    </button>
+
+                    <button onclick="chooseTime('medium')">
+                        🍿 90 — 120 minutes
+                    </button>
+
+                    <button onclick="chooseTime('long')">
+                        🌙 I've got 2+ hours
+                    </button>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- QUESTION 4 -->
+
+            <section
+                class="question-section hidden"
+                id="question4"
+            >
+
+                <p class="question-number">
+                    04 — THE WORLD
+                </p>
+
+                <h2>
+                    Where are we<br>
+                    <em>travelling tonight?</em>
+                </h2>
+
+
+                <div class="options">
+
+                    <button onclick="chooseLanguage('bollywood')">
+                        🇮🇳 Hindi / Bollywood
+                    </button>
+
+                    <button onclick="chooseLanguage('telugu')">
+                        🌺 Telugu
+                    </button>
+
+                    <button onclick="chooseLanguage('tamil')">
+                        🌿 Tamil
+                    </button>
+
+                    <button onclick="chooseLanguage('malayalam')">
+                        🌴 Malayalam
+                    </button>
+
+                    <button onclick="chooseLanguage('hollywood')">
+                        🎞️ English
+                    </button>
+
+                    <button onclick="chooseLanguage('any')">
+                        ✨ Surprise me
+                    </button>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- QUESTION 5 -->
+
+            <section
+                class="question-section hidden"
+                id="question5"
+            >
+
+                <p class="question-number">
+                    05 — THE COMPANY
+                </p>
+
+                <h2>
+                    Who's joining<br>
+                    <em>movie night?</em>
+                </h2>
+
+
+                <div class="options">
+
+                    <button onclick="chooseGroup('alone')">
+                        ☕ Just me
+                    </button>
+
+                    <button onclick="chooseGroup('friends')">
+                        🥂 My friends
+                    </button>
+
+                    <button onclick="chooseGroup('family')">
+                        🏡 Family
+                    </button>
+
+                    <button onclick="chooseGroup('date')">
+                        🌹 Date night
+                    </button>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- QUESTION 6 -->
+
+            <section
+                class="question-section hidden"
+                id="question6"
+            >
+
+                <p class="question-number">
+                    06 — THE STANDARD
+                </p>
+
+                <h2>
+                    How picky are<br>
+                    <em>we being?</em>
+                </h2>
+
+
+                <div class="options">
+
+                    <button onclick="chooseRating(6)">
+                        ✦ Surprise me
+                    </button>
+
+                    <button onclick="chooseRating(7)">
+                        ⭐ At least 7/10
+                    </button>
+
+                    <button onclick="chooseRating(8)">
+                        ⭐ Only the good stuff
+                    </button>
+
+                    <button onclick="chooseRating(9)">
+                        🏆 Give me a masterpiece
+                    </button>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- RESULT -->
+
+            <section
+                class="result-section hidden"
+                id="resultSection"
+            >
+
+                <p class="question-number">
+                    ✦ KHUSI'S PICK ✦
+                </p>
+
+                <h2>
+                    I think I've found<br>
+                    <em>your movie.</em>
+                </h2>
+
+
+                <div class="movie-card">
+
+                    <div class="poster">
+
+                        <div class="poster-decoration">
+                            ✦
+                        </div>
+
+                        <div class="poster-icon">
+                            🎞️
+                        </div>
+
+                        <p>
+                            TONIGHT'S
+                        </p>
+
+                        <h3 id="movieTitle">
+                            Movie
+                        </h3>
+
+                        <div class="poster-line"></div>
+
+                        <small>
+                            A KHUSI RECOMMENDATION
+                        </small>
+
+                    </div>
+
+
+                    <div class="movie-details">
+
+                        <div
+                            id="movieInfo"
+                            class="movie-rating"
+                        >
+                            ⭐ Rating
+                        </div>
+
+                        <p id="movieDescription">
+                            Your movie recommendation.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <p class="closing-message">
+                    Pour yourself something nice,
+                    get comfortable, and enjoy. ♡
+                </p>
+
+
+                <button
+                    class="again-button"
+                    onclick="restart()"
+                >
+                    ↻ Find another movie
+                </button>
+
+            </section>
+
+
+        </main>
+
+
+
+        <!-- FOOTER -->
+
+        <footer>
+
+            <span>KHUSI</span>
+
+            <span>✦</span>
+
+            <span>MADE FOR MOVIE LOVERS</span>
+
+        </footer>
+
+
+    </div>
+
+
+
+<script>
+
+
+// ==============================
+// USER CHOICES
+// ==============================
+
+
+let mood = "";
+
+let genre = "";
+
+let time = "";
+
+let language = "";
+
+let group = "";
+
+let rating = 0;
+
+
+
+// ==============================
+// START
+// ==============================
+
+
+function startChat() {
+
+    document.getElementById("conversation").style.display =
+        "block";
+
+    document.getElementById("conversation").scrollIntoView({
+        behavior: "smooth"
+    });
+
+}
+
+
+
+// ==============================
+// SECTION NAVIGATION
+// ==============================
+
+
+function nextSection(current, next) {
+
+    document.getElementById(current)
+        .classList.add("hidden");
+
+    document.getElementById(next)
+        .classList.remove("hidden");
+
+    document.getElementById(next)
+        .scrollIntoView({
+            behavior: "smooth",
+            block: "center"
+        });
+
+}
+
+
+
+// ==============================
+// MOOD
+// ==============================
+
+
+function chooseMood(value) {
+
+    mood = value;
+
+    nextSection(
+        "question1",
+        "question2"
+    );
+
+}
+
+
+
+// ==============================
+// GENRE
+// ==============================
+
+
+function chooseGenre(value) {
+
+    genre = value;
+
+    nextSection(
+        "question2",
+        "question3"
+    );
+
+}
+
+
+
+// ==============================
+// TIME
+// ==============================
+
+
+function chooseTime(value) {
+
+    time = value;
+
+    nextSection(
+        "question3",
+        "question4"
+    );
+
+}
+
+
+
+// ==============================
+// LANGUAGE
+// ==============================
+
+
+function chooseLanguage(value) {
+
+    language = value;
+
+    nextSection(
+        "question4",
+        "question5"
+    );
+
+}
+
+
+
+// ==============================
+// GROUP
+// ==============================
+
+
+function chooseGroup(value) {
+
+    group = value;
+
+    nextSection(
+        "question5",
+        "question6"
+    );
+
+}
+
+
+
+// ==============================
+// RATING
+// ==============================
+
+
+function chooseRating(value) {
+
+    rating = value;
+
+    nextSection(
+        "question6",
+        "resultSection"
+    );
+
+    recommendMovie();
+
+}
+
+
+
+// ==============================
+// MOVIE DATABASE
+// ==============================
+
+
+const movies = [
+
+    {
+        title: "The Nice Guys",
+        mood: "funny",
+        genre: "comedy",
+        time: "medium",
+        language: "hollywood",
+        rating: 7.4,
+        description:
+        "A charming, chaotic comedy with brilliant chemistry and plenty of laughs."
+    },
+
+    {
+        title: "3 Idiots",
+        mood: "funny",
+        genre: "comedy",
+        time: "long",
+        language: "bollywood",
+        rating: 8.4,
+        description:
+        "Funny, heartfelt and endlessly rewatchable — a true Bollywood favourite."
+    },
+
+    {
+        title: "Interstellar",
+        mood: "mind",
+        genre: "sci-fi",
+        time: "long",
+        language: "hollywood",
+        rating: 8.7,
+        description:
+        "A beautiful journey through space, time, family and everything in between."
+    },
+
+    {
+        title: "Inception",
+        mood: "mind",
+        genre: "sci-fi",
+        time: "long",
+        language: "hollywood",
+        rating: 8.8,
+        description:
+        "Dreams within dreams. A clever, stylish film that will keep your brain busy."
+    },
+
+    {
+        title: "The Conjuring",
+        mood: "scary",
+        genre: "horror",
+        time: "medium",
+        language: "hollywood",
+        rating: 7.5,
+        description:
+        "Lights off, blankets ready. This supernatural horror is not for the faint-hearted."
+    },
+
+    {
+        title: "The Notebook",
+        mood: "romantic",
+        genre: "romance",
+        time: "medium",
+        language: "hollywood",
+        rating: 7.8,
+        description:
+        "A timeless love story for a quiet, romantic movie night."
+    },
+
+    {
+        title: "RRR",
+        mood: "action",
+        genre: "action",
+        time: "long",
+        language: "telugu",
+        rating: 7.8,
+        description:
+        "Big emotions, bigger action and pure cinematic spectacle."
+    },
+
+    {
+        title: "Baahubali: The Beginning",
+        mood: "action",
+        genre: "action",
+        time: "long",
+        language: "telugu",
+        rating: 8.0,
+        description:
+        "An epic Indian adventure filled with battles, romance and unforgettable visuals."
+    },
+
+    {
+        title: "Dangal",
+        mood: "emotional",
+        genre: "drama",
+        time: "long",
+        language: "bollywood",
+        rating: 8.3,
+        description:
+        "An inspiring story about family, ambition and refusing to give up."
+    },
+
+    {
+        title: "Andhadhun",
+        mood: "mind",
+        genre: "thriller",
+        time: "medium",
+        language: "bollywood",
+        rating: 8.2,
+        description:
+        "Twists, secrets and dark humour make this one impossible to predict."
+    },
+
+    {
+        title: "Premam",
+        mood: "romantic",
+        genre: "romance",
+        time: "long",
+        language: "malayalam",
+        rating: 8.3,
+        description:
+        "A warm, nostalgic coming-of-age romance with beautiful music."
+    },
+
+    {
+        title: "Jailer",
+        mood: "action",
+        genre: "action",
+        time: "long",
+        language: "tamil",
+        rating: 7.1,
+        description:
+        "Mass entertainment, action and plenty of superstar energy."
+    }
+
+];
+
+
+
+// ==============================
+// FIND MOVIE
+// ==============================
+
+
+function recommendMovie() {
+
+    let matches = movies.filter(function(movie) {
+
+        let moodMatch =
+            movie.mood === mood;
+
+        let genreMatch =
+            movie.genre === genre;
+
+        let timeMatch =
+            movie.time === time;
+
+        let languageMatch =
+            language === "any" ||
+            movie.language === language;
+
+        let ratingMatch =
+            movie.rating >= rating;
+
+        return (
+            moodMatch &&
+            genreMatch &&
+            timeMatch &&
+            languageMatch &&
+            ratingMatch
+        );
+
+    });
+
+
+
+    // NO PERFECT MATCH
+
+    if (matches.length === 0) {
+
+        document.getElementById("movieTitle").innerText =
+            "A little mystery...";
+
+        document.getElementById("movieInfo").innerText =
+            "♡ No perfect match this time";
+
+        document.getElementById("movieDescription").innerText =
+            "I couldn't find something that fits every single choice. Try again with a slightly different mood — I'll find something lovely.";
+
+        return;
+
+    }
+
+
+
+    // RANDOM MATCH
+
+    let movie =
+        matches[
+            Math.floor(
+                Math.random() *
+                matches.length
+            )
+        ];
+
+
+
+    document.getElementById("movieTitle").innerText =
+        movie.title;
+
+    document.getElementById("movieInfo").innerText =
+        "★ " + movie.rating + " / 10";
+
+    document.getElementById("movieDescription").innerText =
+        movie.description;
+
+}
+
+
+
+// ==============================
+// START AGAIN
+// ==============================
+
+
+function restart() {
+
+    location.reload();
+
+}
+
+
+</script>
+
+
+</body>
+
+</html>
